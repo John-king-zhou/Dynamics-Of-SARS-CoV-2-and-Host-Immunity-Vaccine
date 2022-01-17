@@ -14,7 +14,7 @@ import time
 warnings.filterwarnings('error')
 
 def get_mode(Para):
-    Time=np.arange(0, 50, 0.1)
+    Time=np.arange(0, 60, 0.1)
     initial = [0.01, 0, Para[52] / Para[62], 0, 0, Para[53] / Para[65], 0, 0, Para[159], 0, 0, 0, 0, 0, 0,
                Para[54] / Para[70], 0, Para[160], 0, 0, 0, 0, 0, 0, Para[77] / Para[101], Para[82] / Para[102],
                Para[84] / Para[103], (Para[88] + Para[54] / Para[70] * Para[90]) / Para[104], Para[91] / Para[105],
@@ -55,7 +55,7 @@ if __name__=='__main__':
                   'Mode 1:%i/%i'%(len(Para_mode[1]),len(Para_mode[0])),
                   'Mode 2:%i/%i' % (len(Para_mode[2]), len(Para_mode[0])),
                   'Mode 3:%i/%i'%(len(Para_mode[3]),len(Para_mode[0])),
-                  'Mode 4:%i/%i' % (len(Para_mode[4]), len(Para_mode[0])),
+                  'Asymptomatic:%i/%i' % (len(Para_mode[4]), len(Para_mode[0])),
                   'time used:%1.1f s'%(time.perf_counter()-time0))
     for mode in range(0, 5, 1):
         np.savetxt('Spl_Para%i.txt'%mode, Para_mode[mode])
